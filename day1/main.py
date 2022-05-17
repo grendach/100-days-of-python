@@ -1,11 +1,11 @@
 # Worknig with variables.
 print("Day 1 - String Manipulation")
-print("String Concatenation is done with the"  + ' "+" sign.')
+print("String Concatenation is done with the" + ' "+" sign.')
 print('e.g. print("Hello " + "world")')
 print(("New lines can be created with a backslash and n."))
 
-#This code prints the number of characters in a user's name.
-print( len( input("What is your name? ") ) )
+# This code prints the number of characters in a user's name.
+print(len(input("What is your name? ")))
 
 # 🚨 Don't change the code below 👇
 a = input("a: ")
@@ -13,7 +13,7 @@ b = input("b: ")
 # 🚨 Don't change the code above 👆
 
 ####################################
-#Write your code below this line 👇
+# Write your code below this line 👇
 new_a = b
 new_b = a
 
