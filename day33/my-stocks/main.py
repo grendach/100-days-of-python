@@ -66,7 +66,7 @@ with smtplib.SMTP_SSL("smtp.gmail.com", 465) as connection:
 
 # html = open(f"{fund_1_name}.html")
 # msg = MIMEText(html.read(), 'html')
-# msg['From'] = MY_EMAIL
+# msg['From'] = MY_EMAI32L
 # msg['To'] = MY_EMAIL
 # msg['Subject'] = f"{fund_1_name} Report"
 
