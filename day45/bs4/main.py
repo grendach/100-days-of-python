@@ -1,8 +1,9 @@
 ####Introduction to Web Scraping#####
+import requests
 from bs4 import BeautifulSoup
 
 #Alternative parsing module
-import lxml
+# import lxml
 
 with open("website.html") as file:
         contents = file.read()
@@ -42,20 +43,19 @@ section_heading = soup.find(name="h3", class_="heading")
 # print(section_heading.get("class"))
 
 #You can also find by using a CSS Selector:
-print(soup.select_one(selector=".company a"))
-print(soup.select("a"))
+# print(soup.select_one(selector=".company a"))
+# print(soup.select("a"))
 
 
 
 ##############Scraping Hacker News#########
-from bs4 import BeautifulSoup
-import requests
+
 
 response = requests.get("https://news.ycombinator.com/news")
 yc_web_page = response.text
 
 soup = BeautifulSoup(yc_web_page, "html.parser")
-articles = soup.find_all(name="a", class_="storylink")
+articles = soup.find_all(name="a", class_="titlelink")
 article_texts = []
 article_links = []
 for article_tag in articles:
@@ -71,20 +71,3 @@ largest_index = article_upvotes.index(largest_number)
 
 print(article_texts[largest_index])
 print(article_links[largest_index])
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
